@@ -1,0 +1,1 @@
+# Aplicada1.Core
