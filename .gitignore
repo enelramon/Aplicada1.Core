@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Aplicada1.Core/obj/Aplicada1.Core.csproj.nuget.dgspec.json
+/.vs/Aplicada1.Core/v18
+/Aplicada1.Core/.vs/Aplicada1.Core
+/Aplicada1.Core/obj
