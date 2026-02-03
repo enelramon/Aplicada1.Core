@@ -4,6 +4,21 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+
+    <PackageId>Aplicada1.Core</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Enel Almonte</Authors>
+    <Description>Contrato genérico de servicios para capas de negocio y datos en proyectos Aplicada1.</Description>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/enelramon/Aplicada1.Core.git</RepositoryUrl>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\\LICENSE.txt" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
