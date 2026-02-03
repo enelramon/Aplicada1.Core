@@ -1,5 +1,7 @@
 namespace Aplicada1.Core;
 
+using System.Linq.Expressions;
+
 public interface IService<T, TKey> where T : class
 {
     Task<bool> Guardar(T entidad);
