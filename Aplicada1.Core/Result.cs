@@ -7,7 +7,9 @@ public class Result
         if ((isSuccess && error != Error.None) ||
             (!isSuccess && error == Error.None))
         {
-            throw new InvalidOperationException("Invalid error", new Exception(nameof(error)));
+            throw new InvalidOperationException(
+                $"Invalid Result state: isSuccess={isSuccess}, error=({error.Code}, {error.Description}). " +
+                "A successful result must use Error.None and a failed result must provide a non-empty error.");
         }
 
         IsSuccess = isSuccess;
@@ -230,5 +232,5 @@ public class Result<T> : Result
 
     public static implicit operator Result<T>(T value) => Success(value);
 
-    public static implicit operator Result<T>(Error error) => Failure<T>(error);
+    public static Result<T> FromFailure(Error error) => Failure<T>(error);
 }
