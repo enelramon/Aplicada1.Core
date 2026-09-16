@@ -283,4 +283,32 @@ public class ResultTests
         Assert.Equal("EXCEPTION", result.Error.Code);
         Assert.Contains("not-a-number", result.Error.Description);
     }
+
+    [Fact]
+    public async Task IServiceResult_ShouldExposeResultBasedContract()
+    {
+        var service = new FakeResultService();
+
+        var saveResult = await service.Guardar("value");
+        var getResult = await service.Buscar(1);
+        var deleteResult = await service.Eliminar(1);
+        var listResult = await service.GetList(x => x.Contains("value"));
+
+        Assert.True(saveResult.IsSuccess);
+        Assert.True(getResult.IsSuccess);
+        Assert.True(deleteResult.IsSuccess);
+        Assert.True(listResult.IsSuccess);
+    }
+
+    private sealed class FakeResultService : IServiceResult<string, int>
+    {
+        public Task<Result> Guardar(string entidad) => Task.FromResult(Result.Success());
+
+        public Task<Result<string?>> Buscar(int id) => Task.FromResult(Result.Success<string?>("value"));
+
+        public Task<Result> Eliminar(int id) => Task.FromResult(Result.Success());
+
+        public Task<Result<List<string>>> GetList(System.Linq.Expressions.Expression<Func<string, bool>> criterio)
+            => Task.FromResult(Result.Success(new List<string> { "value" }));
+    }
 }
