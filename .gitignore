@@ -1,10 +1,18 @@
 ﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+# Visual Studio / .NET generated files
 ################################################################################
 
-/Aplicada1.Core/obj/Aplicada1.Core.csproj.nuget.dgspec.json
-/.vs/Aplicada1.Core/v18
-/Aplicada1.Core/.vs/Aplicada1.Core
-/Aplicada1.Core/obj
+# Ignore build outputs in any project folder
+**/bin/
+**/obj/
 
-Aplicada1.Core/.vs/
+# Ignore VS metadata folders
+.vs/
+**/.vs/
+
+# Optional: ignore user-specific files if you prefer
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+

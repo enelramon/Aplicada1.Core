@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 
     <PackageId>Aplicada1.Core</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>Enel Almonte</Authors>
     <Description>Contrato genérico de servicios para capas de negocio y datos en proyectos Aplicada1.</Description>
     <RepositoryType>git</RepositoryType>
