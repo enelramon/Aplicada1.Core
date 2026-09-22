@@ -34,7 +34,7 @@ dotnet add package Aplicada1.Core
 
 ## Result pattern
 
-El `Result` pattern es una forma de representar el resultado de una operación sin lanzar excepciones para errores esperados del dominio. En lugar de devolver `null`, `false` o lanzar una excepción cuando el caso de error es manejable, la operación devuelve un objeto con el estado y el detalle del error.
+El `Result` pattern es una forma de representar el resultado de una operación sin lanzar excepciones para errores esperados del dominio. En lugar de devolver `null`, `false` o lanzar una excepción cuando el caso de error es manejable, la operación devuelve un objeto con el estado y el detalle del error. La razon de este patrón es para motivar la programación funcional.
 
 ### ¿Cuándo usarlo?
 
